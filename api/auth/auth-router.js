@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { checkPayload, checkUsernameUnique, checkLoginPayload } = require('../auth/auth-middleware.js');
 const { JWT_SECRET } = require('../secrets/index.js');
 const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypjst');
+const bcrypt = require('bcryptjs');
 const User = require('../users/users-model.js');
 
 router.post('/register', checkPayload, checkUsernameUnique, (req, res, next) => {
@@ -45,7 +45,7 @@ router.post('/register', checkPayload, checkUsernameUnique, (req, res, next) => 
     .catch(next);
 });
 
-router.post('/login', checkPayload, checkLoginPayload, (req, res) => {
+router.post('/login', checkPayload, checkLoginPayload, (req, res, next) => {
   // res.end('implement login, please!');
   /*
     IMPLEMENT

@@ -4,16 +4,15 @@ function checkPayload(req, res, next) {
   const { username, password } = req.body;
   if (!username || !password) {
     return res.status(400).json({ message: 'username and password required' });
-  }
+  } else {
   next();
+  }
 }
 
 async function checkUsernameUnique(req, res, next) {
-  const user = req.body;
   try {
-    const rows = await User.findBy({ username: user.username });
+    const rows = await User.findBy({ username: req.body.username });
     if (!rows) {
-      req.userData = rows;
       next();
     } else {
       return res.status(409).json({ message: 'username taken' });
