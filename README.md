@@ -11,7 +11,7 @@ You are not allowed to collaborate during the sprint challenge.
 ## Project Setup
 
 - [x] Run `npm install` to install your dependencies.
-- [ ] Run tests locally executing `npm test`.
+- [x] Run tests locally executing `npm test`.
 
 For a step-by-step on setting up Codegrade see [this guide.](https://www.notion.so/lambdaschool/Submitting-an-assignment-via-Code-Grade-A-Step-by-Step-Walkthrough-07bd65f5f8364e709ecb5064735ce374)
 
@@ -45,16 +45,23 @@ Your finished project must include all of the following requirements (further in
 
 ## Submission format
 
-- [ ] Submit via Codegrade by pushing commits to your `<firstName-lastName>` branch on Github.
-- [ ] Check Codegrade before the deadline to compare its results against your local tests.
-- [ ] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
-- [ ] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
+- [x] Submit via Codegrade by pushing commits to your `<firstName-lastName>` branch on Github.
+- [x] Check Codegrade before the deadline to compare its results against your local tests.
+- [x] Check Codegrade on the days following the Sprint Challenge for reviewer feedback.
+- [x] New commits will be evaluated by Codegrade if pushed _before_ the sprint challenge deadline.
 
 ## Interview Questions
 
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics.
 
 1. Differences between using _sessions_ or _JSON Web Tokens_ for authentication.
+   `While both are used for authentication, sessions are more secure and are more efficient. Sessions are used for storing data on the server, while JSON Web Tokens are used for storing data on the client side; sessions are only implemented as needed by the server.`
+
 2. What does `bcryptjs` do to help us store passwords in a secure manner?
+   `bcryptjs uses a hashing algorithm to hash passwords. It is a one-way hashing algorithm, meaning that it cannot be reversed, thus it is more difficult for unauthorized users to try to reverse/decrypt passwords.`
+
 3. How are unit tests different from integration and end-to-end testing?
+   `Unit tests are used to test individual functions and classes. Integration tests are used to test the entire application. End-to-end tests are used to test the entire application from the client side to the server side.`
+
 4. How does _Test Driven Development_ change the way we write applications and tests?
+   `Test Driven Development is a software development process that uses tests to drive development. It is a process that involves writing tests before writing code. Writing test-driven code may take a little more time at the beginning, but it will ensure that code is written well for other users or coders who may work on the code at a future date. `
